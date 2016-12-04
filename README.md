@@ -20,7 +20,7 @@ Na voljo je 5 funkcij.
 * `pridobiPodatke(datum)` - izšiše podatke o malici za 7 dni od danega datuma
 * `odjava(datum)` - odjavi uporabnika od malice na določen dan
 * `prijava(datum)` - prijavi uporabnika na topel obrok na določen dan
-* `zamenjava(datum, tip)` - na določen dan uporabniku spremeni tip obroka. Ta je lahko le ´**SUH** - suhi obrok in **OSN** - topli obrok. Tipa ni potrebno napisati, privzet je SUH.
+* `zamenjava(datum, tip)` - na določen dan uporabniku spremeni tip obroka. Ta je lahko le **SUH** - suhi obrok in **OSN** - topli obrok. Tipa ni potrebno napisati, privzet je **SUH**.
 
 Za primer glej spodnji program:
 ```python
