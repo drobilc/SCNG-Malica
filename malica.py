@@ -44,6 +44,14 @@ class Malica(object):
         teden = teden[2:]
         return teden
 
+    def pridobiPodatkeDanes(self):
+        today = datetime.date.today()
+        datum = today.strftime("%d.%m.%Y")
+        return self.pridobiPodatke(datum)[0]
+
+    def pridobiPodatkeNaDan(self, datum):
+        return self.pridobiPodatke(datum)[0]
+
     def odjava(self, datum):
         hrana = urllib.urlencode({'dnevi' : 'td_231_2_' + datum, 'hid2' : '', 'act' : 'ODJ'})
         response = self.opener.open("https://malica.scng.si/Home/OdjaviSpremembeMeni", hrana)
