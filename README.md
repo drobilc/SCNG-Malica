@@ -15,12 +15,14 @@ Po inštalacij potrebnih knjižnic je uporaba skripta preprosta. Najprej ga je p
 import malica
 ```
 
-Na voljo je 5 funkcij.
+Na voljo je 7 funkcij.
 * `pridobiPodatkeTaTeden()` - izpiše stanje malice ta teden (od ponedeljka do nedelje)
 * `pridobiPodatke(datum)` - izšiše podatke o malici za 7 dni od danega datuma
 * `odjava(datum)` - odjavi uporabnika od malice na določen dan
 * `prijava(datum)` - prijavi uporabnika na topel obrok na določen dan
-* `zamenjava(datum, tip)` - na določen dan uporabniku spremeni tip obroka. Ta je lahko le **SUH** - suhi obrok in **OSN** - topli obrok. Tipa ni potrebno napisati, privzet je **SUH**.
+* `zamenjava(datum, tip)` - na določen dan uporabniku spremeni tip obroka. Ta je lahko le **SUH** - suhi obrok in **OSN** - topli obrok. Tipa ni potrebno napisati, privzet je **SUH**
+* `pridobiPodatkeDanes()` - pridobi podatke o malici na današnji dan
+* `pridobiPodatkeNaDan(datum)` - pridobi podatke o malici za določen dan v letu
 
 Za primer glej spodnji program:
 ```python
@@ -50,4 +52,10 @@ print uporabnik.pridobiPodatke("19.12.2016")
 #Uporabniku zamenjamo tip obroka na topli obrok
 uporabnik.zamenjava("19.12.2016", "OSN")
 print uporabnik.pridobiPodatke("19.12.2016")
+
+#Izpišemo današnji tip obroka
+print uporabnik.pridobiPodatkeDanes()
+
+#Izpišemo tip obroka 19. decembra 2016
+print uporabnik.pridobiPodatkeNaDan("19.12.2016")
 ```
