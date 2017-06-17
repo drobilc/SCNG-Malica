@@ -31,31 +31,29 @@ import malica
 #Ustvarimo nov objekt uporabnika z uporabniskim imenom "9003477" in geslom "geslogeslo"
 uporabnik = malica.Malica("9003477", "geslogeslo")
 
-#Ko je uporabnik prijavljen izpisemo njegovo ime in priimek
-print uporabnik.imePriimek
-
 #Izpisemo podatke od ponedeljka do nedelje ta teden
 print uporabnik.pridobiPodatkeTaTeden()
 
 #Uporabnika od malice odjavimo za 19. december 2016
-uporabnik.odjava("19.12.2016")
-print uporabnik.pridobiPodatke("19.12.2016")
+datum = datetime.datetime(2016, 12, 19)
+uporabnik.odjava(datum)
+print uporabnik.pridobiPodatke(datum)
 
 #Uporabnika nazaj prijavimo za 19. december 2016
-uporabnik.prijava("19.12.2016")
-print uporabnik.pridobiPodatke("19.12.2016")
+uporabnik.prijava(datum)
+print uporabnik.pridobiPodatke(datum)
 
 #Uporabniku zamenjamo tip obroka na suho malico
-uporabnik.zamenjava("19.12.2016", "SUH")
-print uporabnik.pridobiPodatke("19.12.2016")
+uporabnik.zamenjava(datum, "SUH")
+print uporabnik.pridobiPodatke(datum)
 
 #Uporabniku zamenjamo tip obroka na topli obrok
-uporabnik.zamenjava("19.12.2016", "OSN")
-print uporabnik.pridobiPodatke("19.12.2016")
+uporabnik.zamenjava(datum, "OSN")
+print uporabnik.pridobiPodatke(datum)
 
 #Izpišemo današnji tip obroka
 print uporabnik.pridobiPodatkeDanes()
 
 #Izpišemo tip obroka 19. decembra 2016
-print uporabnik.pridobiPodatkeNaDan("19.12.2016")
+print uporabnik.pridobiPodatkeNaDan(datum)
 ```
